@@ -34,8 +34,8 @@ jobs:
 workflows:
   default:
     jobs:
-      build
-      test:
-        requires: [build]
-      analyze:
-        requires: [test]
+      - build
+      - test:
+          requires: [build]
+      - analyze:
+          requires: [test]
