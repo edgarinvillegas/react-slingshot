@@ -25,12 +25,12 @@ jobs:
     analyze:
       docker:
         - image: circleci/node:13.8.0
-        steps:
-          - checkout
-          - restore_cache:
-              keys:
-                - "npm-modules"
-          - run: npm audit
+      steps:
+        - checkout
+        - restore_cache:
+            keys:
+              - "npm-modules"
+        - run: npm audit
 workflows:
   default:
     jobs:
